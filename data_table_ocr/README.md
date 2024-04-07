@@ -1,1 +1,8 @@
 My goal for this project was to streamline the data entry process by taking a screenshot or image of a data table found in some document (a pdf, textbook, slideshow, etc.) and converting this image into a .csv file that can be used for data analysis. The purpose of this task is to eliminate the need to manually enter data into an Excel file or other data table object. To accomplish this, I devised iterative techniques for segmenting data tables into rows, columns, and cells. I further implemented methods to isolate individual characters within each cell. I subsequently passed these characters into a convolutional neural network that I trained using a dataset with over 600,000 images. The CNN demonstrated excellent performance, accurately classifying 85% of unseen images across 93 distinct character classes.
+
+Although the final table results were not exactly what I hoped for, this project has the promise to become significantly better and can be very useful in the future. The main areas of improvement needed are:
+1. Improve character segmentation to work in all situation (currently works most of the time with minimal errors)
+2. Train the character class neural network with even more data to yield higher classification accuracy (has particular trouble distinguishing 1's, l's, and i's)
+3. Better image preprocessing (with thresholding and blurring) to increase similarity between characters in actual images to neural network's training images.
+4. Be able to identify spaces in case there are multiple words in each cell.
+5. Reduce reliance of table segmentation on perfectly straight vertical and horizontal lines (gives potential to segment hand-drawn data as well as potentially rotated or skewed images)
